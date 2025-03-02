@@ -29,5 +29,5 @@ def lambda_handler(event, context):
             print("After translation : ",translated)
             final_document_array+=translated
             final_document_array+='\n\n'
-    s3_client.put_object(Body=final_document_array, Bucket='outtransbucket', Key=file_name)
+    s3_client.put_object(Body=final_document_array, Bucket='outtputranslationbucket', Key=file_name)
     print("Done") 
